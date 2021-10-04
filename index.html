@@ -11,84 +11,88 @@
 </head>
 
 <body>
-  <div class="hero hero-bg is-fullheight">
-    <div class="hero-head">
-      <div class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item logo-link">
-              <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" alt='Logo Epam'>
-            </a>
-            <span class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-
-          <div id="navbarMenu" class="navbar-menu">
-            <div class="navbar-end">
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i aria-hidden="true" class="fa fa-home"></i>
-                  </span>
-                  <span>Home</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i aria-hidden="true" class="fab fa-superpowers"></i>
-                  </span>
-                  <span>Examples</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i aria-hidden="true" class="fa fa-book"></i>
-                  </span>
-                  <span>Documentation</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i aria-hidden="true" class="fab fa-github"></i>
-                  </span>
-                  <span>View Source</span>
-                </a>
+  <header>
+    <div class="hero hero-bg is-fullheight">
+      <div class="hero-head">
+        <div class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item logo-link">
+                <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" alt='Logo Epam'>
+              </a>
+              <span class="navbar-burger burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
               </span>
             </div>
+  
+            <nav id="navbarMenu" class="navbar-menu">
+              <div class="navbar-end">
+                <span class="navbar-item">
+                  <a class="button is-white is-outlined">
+                    <span class="icon">
+                      <i aria-hidden="true" class="fa fa-home"></i>
+                    </span>
+                    <span>Home</span>
+                  </a>
+                </span>
+                <span class="navbar-item">
+                  <a class="button is-white is-outlined">
+                    <span class="icon">
+                      <i aria-hidden="true" class="fab fa-superpowers"></i>
+                    </span>
+                    <span>Examples</span>
+                  </a>
+                </span>
+                <span class="navbar-item">
+                  <a class="button is-white is-outlined">
+                    <span class="icon">
+                      <i aria-hidden="true" class="fa fa-book"></i>
+                    </span>
+                    <span>Documentation</span>
+                  </a>
+                </span>
+                <span class="navbar-item">
+                  <a class="button is-white is-outlined">
+                    <span class="icon">
+                      <i aria-hidden="true" class="fab fa-github"></i>
+                    </span>
+                    <span>View Source</span>
+                  </a>
+                </span>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="column is-6 is-offset-3">
+            <h1 class="title has-text-white">We have web accessibility in mind</h1>
+            <div class="subtitle has-text-white">
+              Would you like to get the latest news?
+            </div>
+            <form class="box">
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input class="input">
+                </p>
+                <p class="control">
+                  <a class="button is-info">Notify Me</a>
+                </p>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+  </header>
+  
 
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="column is-6 is-offset-3">
-          <h1 class="title has-text-white">We have web accessibility in mind</h1>
-          <div class="subtitle has-text-white">
-            Would you like to get the latest news?
-          </div>
-          <div class="box">
-            <div class="field is-grouped">
-              <p class="control is-expanded">
-                <input class="input">
-              </p>
-              <p class="control">
-                <a class="button is-info">Notify Me</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" id="about">
+  <main>
+  <section class="section" id="about">
     <div class="section-heading has-text-centered">
       <h2 class="title is-2">About Us</h2>
       <h5 class="subtitle is-5">We of all trades, master of "some"</h5>
@@ -124,7 +128,7 @@
         <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
         <li>Vivamus maximus ultricies pulvinar.</li>
       </ol>
-      <div class="blockquote">Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</div>
+      <blockquote class="blockquote">Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
       <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
       <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
       <dl>
@@ -191,7 +195,7 @@
       <h3 class="is-6 title">Sixth level</h3>
       <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
     </div>
-  </div>
+  </section>
 
   <div class="hero has-background-grey-light">
     <div class="container features">
@@ -282,7 +286,7 @@
   </div>
 
   <div class="tab-content container">
-    <div class="tab-pane is-active" id="pane-1" class="level">
+    <div class="tab-pane is-active level" id="pane-1">
       <div class="container">
         <div class="columns features">
           <div class="column is-4">
@@ -411,7 +415,7 @@
     </div>
   </div>
 
-  <div class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter">
     <div class="container has-text-centered">
         <div class="section-heading has-text-centered">
           <h2 class="title is-2">Upcoming events</h2>
@@ -484,9 +488,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section">
     <div class="section-heading has-text-centered">
       <h2 class="title is-2">Services</h2>
       <h5 class="subtitle is-5">What can I do for you?</h5>
@@ -532,9 +536,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter">
     <div class="container">
       <div class="section-heading has-text-centered">
         <h2 class="title is-2">Photos from past events</h2>
@@ -697,10 +701,9 @@
         </div>
       </div>
     </div>
-    </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section">
     <div class="container">
       <div class="section-heading has-text-centered">
         <h2 class="title is-2">Forum</h2>
@@ -859,9 +862,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section has-background-light">
+  <section class="section has-background-light">
     <div class="container">
       <div class="section-heading has-text-centered">
         <h2 class="title is-2">Contact us</h2>
@@ -955,7 +958,7 @@
         </div>
       </form>
     </div>
-  </div>
+  </section>
 
   <!-- <div class="section">
     <div class="container">
@@ -1065,8 +1068,9 @@
       </div>
     </div>
   </div> -->
+</main>
 
-  <div class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-2">
@@ -1107,15 +1111,15 @@
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a><i aria-hidden="true" class="fab fa-github-alt fa-2x"></i></a>
-          <a><i aria-hidden="true" class="fab fa-youtube fa-2x"></i></a>
-          <a><i aria-hidden="true" class="fab fa-facebook fa-2x"></i></a>
-          <a><i aria-hidden="true" class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://github.com/" target="_blank"><i aria-hidden="true" class="fab fa-github-alt fa-2x"></i></a>
+          <a href="https://www.youtube.com/" target="_blank"><i aria-hidden="true" class="fab fa-youtube fa-2x"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i aria-hidden="true" class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://twitter.com" target="_blank"><i aria-hidden="true" class="fab fa-twitter fa-2x"></i></a>
         </div>
         <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
       </div>
     </div>
-  </div>
+  </footer>
 
   <div id="modal-card" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
