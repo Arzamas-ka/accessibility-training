@@ -205,7 +205,8 @@ a.box:focus,
 .control input[type='checkbox']:focus,
 .control input[type='radio']:focus,
 .control .button.is-link:focus,
-.control .button.is-text:focus {
+.control .button.is-text:focus,
+.burger-hidden:focus {
   outline: 0;
   border-radius: 2px;
   box-shadow: 0 0 2px 1.5px #bc6e6e, 0 0 3px 3px #f279dd;
@@ -262,4 +263,13 @@ a.box:focus,
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.burger-hidden {
+  border: 0;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  color: transparent;
+  background-color: transparent;
 }

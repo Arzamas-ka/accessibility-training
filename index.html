@@ -18,13 +18,16 @@
         <div class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <a class="navbar-item logo-link">
+              <a class="navbar-item logo-link" tabindex="0">
                 <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" alt='Logo Epam'>
               </a>
               <span class="navbar-burger burger" data-target="navbarMenu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <button class='burger-hidden' type="button" tabindex="0">Click here to open or close the menu</button>
+                <nav id="navigation">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </nav>
               </span>
             </div>
   
@@ -1121,19 +1124,19 @@
         <div class="soc">
           <a href="https://github.com/" target="_blank" rel="noopener">
             <i aria-hidden="true" class="fab fa-github-alt fa-2x"></i>
-            <span class="visuallyhidden">GitHub will open in a new window</span>
+            <span class="visually-hidden">GitHub will open in a new window</span>
           </a>
           <a href="https://www.youtube.com/" target="_blank" rel="noopener">
             <i aria-hidden="true" class="fab fa-youtube fa-2x"></i>
-            <span class="visuallyhidden">Youtube will open in a new window</span>
+            <span class="visually-hidden">Youtube will open in a new window</span>
           </a>
           <a href="https://www.facebook.com" target="_blank" rel="noopener">
             <i aria-hidden="true" class="fab fa-facebook fa-2x"></i>
-            <span class="visuallyhidden">Facebook will open in a new window</span>
+            <span class="visually-hidden">Facebook will open in a new window</span>
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener">
             <i aria-hidden="true" class="fab fa-twitter fa-2x"></i>
-            <span class="visuallyhidden">Twitter will open in a new window</span>
+            <span class="visually-hidden">Twitter will open in a new window</span>
           </a>
         </div>
         <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
