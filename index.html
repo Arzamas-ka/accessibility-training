@@ -168,9 +168,10 @@
           </pre>
       <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
       <table>
+        <caption class='visually-hidden'>Table heading</caption>
         <tr>
-          <td>Header</td>
-          <td>Header</td>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
         </tr>
         <tr>
           <td>cell</td>
@@ -883,7 +884,7 @@
         <h5 class="subtitle is-5">Don't hesitate, ask anything</h5>
       </div>
 
-      <form class="column is-half is-offset-one-quarter box">
+      <form class="column is-half is-offset-one-quarter box" aria-labelledby="contact form">
         <div class="field">
           <label class="label">Name</label>
           <span class="visually-hidden">Please enter your name</span>
