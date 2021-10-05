@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <a href="#maincontent" class="visually-hidden">Skip to main content</a>
   <header>
     <div class="hero hero-bg is-fullheight">
       <div class="hero-head">
@@ -77,12 +78,12 @@
             <form class="box">
               <div class="field is-grouped">
                 <p class="control is-expanded">
-                  <input class="input">
+                  <label for="notifyInput" class="visually-hidden">Please, enter your email</label>
+                  <input class="input" id="notifyInput" aria-describedby="notifyNote">
+				          <span id="notifyInput" class="visually-hidden">Please enter your email to allow us to notify you</span>
                 </p>
                 <p class="control">
-                  <label for="notifyInput" class="visually-hidden">Please, enter your email</label>
-                <input class="input" id="notifyInput" aria-describedby="notifyNote">
-				          <span id="notifyNote" class="visually-hidden">Please enter your email to allow us to notify you</span>
+                  <button class="button is-info">Notify Me</button>
                 </p>
               </div>
             </form>
@@ -93,7 +94,7 @@
   </header>
   
 
-  <main>
+  <main id="maincontent">
   <section class="section" id="about">
     <div class="section-heading has-text-centered">
       <h2 class="title is-2">About Us</h2>
