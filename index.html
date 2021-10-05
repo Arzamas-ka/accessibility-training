@@ -80,7 +80,9 @@
                   <input class="input">
                 </p>
                 <p class="control">
-                  <button class="button is-info" type='button'>Notify Me</button>
+                  <label for="notifyInput" class="visually-hidden">Please, enter your email</label>
+                <input class="input" id="notifyInput" aria-describedby="notifyNote">
+				          <span id="notifyNote" class="visually-hidden">Please enter your email to allow us to notify you</span>
                 </p>
               </div>
             </form>
@@ -874,6 +876,7 @@
       <form class="column is-half is-offset-one-quarter box">
         <div class="field">
           <label class="label">Name</label>
+          <span class="visually-hidden">Please enter your name</span>
           <div class="control">
             <input class="input" type="text" placeholder="Text input">
           </div>
@@ -881,6 +884,7 @@
 
         <div class="field">
           <label class="label">Username</label>
+          <span class="visually-hidden">Please enter your username</span>
           <div class="control has-icons-left has-icons-right">
             <input class="input is-success" type="text">
             <span class="icon is-small is-left">
@@ -895,6 +899,7 @@
 
         <div class="field">
           <label class="label">Email</label>
+          <span class="visually-hidden">Please enter your email</span>
           <div class="control has-icons-left has-icons-right">
             <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
             <span class="icon is-small is-left">
@@ -909,6 +914,7 @@
 
         <div class="field">
           <label class="label">Subject</label>
+          <span class="visually-hidden">Please choose your subject</span>
           <div class="control">
             <div class="select">
               <select>
@@ -921,6 +927,7 @@
 
         <div class="field">
           <label class="label">Message</label>
+          <span class="visually-hidden">Please enter your message</span>
           <div class="control">
             <textarea class="textarea" placeholder="Textarea"></textarea>
           </div>
