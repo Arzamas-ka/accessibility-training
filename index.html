@@ -11,8 +11,9 @@
 </head>
 
 <body>
-  <a href="#maincontent" class="visually-hidden">Skip to main content</a>
+
   <header>
+    <a href="#navbarMenu" class="visually-hidden">Skip to main content</a>
     <div class="hero hero-bg is-fullheight">
       <div class="hero-head">
         <div class="navbar">
@@ -78,7 +79,7 @@
             <div class="subtitle has-text-white">
               Would you like to get the latest news?
             </div>
-            <form class="box">
+            <form class="box" role="form" aria-labelledby="notify">
               <div class="field is-grouped">
                 <p class="control is-expanded">
                   <label for="notifyInput" class="visually-hidden">Please, enter your email</label>
@@ -96,8 +97,7 @@
     </div>
   </header>
   
-
-  <main id="maincontent">
+<main>
   <section class="section" id="about">
     <div class="section-heading has-text-centered">
       <h2 class="title is-2">About Us</h2>
@@ -1122,24 +1122,30 @@
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a href="https://github.com/" target="_blank" rel="noopener">
-            <i aria-hidden="true" class="fab fa-github-alt fa-2x"></i>
-            <span class="visually-hidden">GitHub will open in a new window</span>
+          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="Github" aria-describedby="open-a-new-window">
+            <i aria-hidden="true" focusable="false" class="fab fa-github-alt fa-2x"></i>
+            <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
           </a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Youtube" aria-describedby="open-a-new-window">
             <i aria-hidden="true" class="fab fa-youtube fa-2x"></i>
-            <span class="visually-hidden">Youtube will open in a new window</span>
+            <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
           </a>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook" aria-describedby="open-a-new-window">
             <i aria-hidden="true" class="fab fa-facebook fa-2x"></i>
-            <span class="visually-hidden">Facebook will open in a new window</span>
+            <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener">
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" aria-describedby="open-a-new-window">
             <i aria-hidden="true" class="fab fa-twitter fa-2x"></i>
-            <span class="visually-hidden">Twitter will open in a new window</span>
+            <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
           </a>
         </div>
-        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        <p>The source code is licensed 
+          <a href="http://opensource.org/licenses/mit-license.php" target="_blank" rel="noopener" aria-label="License of MIT" aria-describedby="open-a-new-window">
+          MIT
+          <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
+          <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+        </a>
+      </p>
       </div>
     </div>
   </footer>
