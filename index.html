@@ -12,7 +12,7 @@
 
 <body>
 
-  <header>
+  <header role="banner">
     <a href="#navbarMenu" class="visually-hidden">Skip to main content</a>
     <div class="hero hero-bg is-fullheight">
       <div class="hero-head">
@@ -32,7 +32,7 @@
               </span>
             </div>
   
-            <nav id="navbarMenu" class="navbar-menu">
+            <nav id="navbarMenu" class="navbar-menu" role='navigation'>
               <div class="navbar-end">
                 <span class="navbar-item">
                   <button class="button is-white is-outlined" type='button'>
@@ -72,7 +72,7 @@
         </div>
       </div>
   
-      <div class="hero-body">
+      <div class="hero-body" role="hero">
         <div class="container has-text-centered">
           <div class="column is-6 is-offset-3">
             <h1 class="title has-text-white">We have web accessibility in mind</h1>
@@ -97,8 +97,8 @@
     </div>
   </header>
   
-<main>
-  <section class="section" id="about">
+<main role='main'>
+  <section class="section" id="about" role='about'>
     <div class="section-heading has-text-centered">
       <h2 class="title is-2">About Us</h2>
       <h5 class="subtitle is-5">We of all trades, master of "some"</h5>
@@ -167,7 +167,7 @@
           &lt;/html&gt;
           </pre>
       <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
-      <table>
+      <table role='table'>
         <caption class='visually-hidden'>Table heading</caption>
         <tr>
           <th scope="col">Header</th>
@@ -210,7 +210,7 @@
     </div>
   </section>
 
-  <div class="hero has-background-grey-light">
+  <div class="hero has-background-grey-light" role="three-key-features">
     <div class="container features">
       <div class="section-heading has-text-centered">
         <h2 class="title is-2">Three key features</h2>
@@ -274,21 +274,21 @@
         <div class="subtitle">We are always in touch we the outside world</div>
       </div>
     </div>
-    <div class="tabs is-boxed is-centered main-menu" id="nav">
+    <div class="tabs is-boxed is-centered main-menu" id="nav" role="tablist">
       <ul>
-        <li data-target="pane-1" id="1" class="is-active">
+        <li data-target="pane-1" id="1" class="is-active" role='item'>
           <a>
             <s class="icon is-small"><i aria-hidden="true" class="fa fa-image"></i></s
             <span>Pictures</span>
           </a>
         </li>
-        <li data-target="pane-3" id="3">
+        <li data-target="pane-3" id="3" role='item'>
           <a>
             <span class="icon is-small"><i aria-hidden="true" class="fab fa-superpowers"></i></span>
             <span>Team</span>
           </a>
         </li>
-        <li data-target="pane-4" id="4">
+        <li data-target="pane-4" id="4" role='item'>
           <a>
             <span class="icon is-small"><i aria-hidden="true" class="fa fa-film"></i></span>
             <span>Video</span>
@@ -299,7 +299,7 @@
   </div>
 
   <div class="tab-content container">
-    <div class="tab-pane is-active level" id="pane-1">
+    <div class="tab-pane is-active level" id="pane-1" role="tabpanel">
       <div class="container">
         <div class="columns features">
           <div class="column is-4">
@@ -355,7 +355,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-3">
+    <div class="tab-pane" id="pane-3" role="tabpanel">
       <div class="columns medias">
         <div class="column">
           <div class="media">
@@ -416,7 +416,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-4">
+    <div class="tab-pane" id="pane-4" role="tabpanel">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
           <h3 class="title has-text-centered">Inspired video</h3>
@@ -428,7 +428,7 @@
     </div>
   </div>
 
-  <section class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter" role="upcoming-events">
     <div class="container has-text-centered">
         <div class="section-heading has-text-centered">
           <h2 class="title is-2">Upcoming events</h2>
@@ -503,7 +503,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" role="services">
     <div class="section-heading has-text-centered">
       <h2 class="title is-2">Services</h2>
       <h5 class="subtitle is-5">What can I do for you?</h5>
@@ -551,7 +551,7 @@
     </div>
   </section>
 
-  <section class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter" role='photos-from-past'>
     <div class="container">
       <div class="section-heading has-text-centered">
         <h2 class="title is-2">Photos from past events</h2>
@@ -884,7 +884,7 @@
         <h5 class="subtitle is-5">Don't hesitate, ask anything</h5>
       </div>
 
-      <form class="column is-half is-offset-one-quarter box" aria-labelledby="contact form">
+      <form class="column is-half is-offset-one-quarter box" aria-labelledby="contact form" role="form">
         <div class="field">
           <label class="label">Name</label>
           <span class="visually-hidden">Please enter your name</span>
@@ -954,13 +954,13 @@
         </div>
 
         <div class="field">
-          <div class="control">
+          <div class="control" role="radiogroup">
             <label class="radio">
-              <input type="radio" name="question">
+              <input type="radio" name="question" role="radio">
               Yes
             </label>
             <label class="radio">
-              <input type="radio" name="question">
+              <input type="radio" name="question" role="radio">
               No
             </label>
           </div>
@@ -968,10 +968,10 @@
 
         <div class="field is-grouped">
           <div class="control">
-            <button class="button is-link">Submit</button>
+            <button class="button is-link" role="button">Submit</button>
           </div>
           <div class="control">
-            <button class="button is-text">Cancel</button>
+            <button class="button is-text" role="button">Cancel</button>
           </div>
         </div>
       </form>
@@ -1195,7 +1195,7 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image1" class="modal modal-fx-3dSlit">
+  <div id="modal-image1" class="modal modal-fx-3dSlit" role='modal'>
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
       <img src="https://source.unsplash.com/random/?sig=1"  alt='Nature'>
@@ -1203,7 +1203,7 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image2" class="modal modal-fx-superScaled">
+  <div id="modal-image2" class="modal modal-fx-superScaled" role='modal'>
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
       <img src="https://source.unsplash.com/random/?sig=3" alt='Flowers'>
