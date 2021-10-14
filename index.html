@@ -23,7 +23,7 @@
                 <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" alt='Logo Epam'>
               </a>
               <span class="navbar-burger burger" data-target="navbarMenu">
-                <button class='burger-hidden' type="button" tabindex="0">Click here to open or close the menu</button>
+                <button class='burger-hidden' type="button" tabindex="0" aria-label="Open the menu">Click here to open the menu</button>
                 <nav id="navigation">
                   <span></span>
                   <span></span>
@@ -79,12 +79,12 @@
             <div class="subtitle has-text-white">
               Would you like to get the latest news?
             </div>
-            <form class="box" role="form" aria-labelledby="notify">
+            <form class="box" role="form" aria-label="form for notify">
               <div class="field is-grouped">
                 <p class="control is-expanded">
                   <label for="notifyInput" class="visually-hidden">Please, enter your email</label>
                   <input class="input" id="notifyInput" aria-describedby="notifyNote">
-				          <span id="notifyInput" class="visually-hidden">Please enter your email to allow us to notify you</span>
+				          <span id="notifyNote" class="visually-hidden">Please enter your email to allow us to notify you</span>
                 </p>
                 <p class="control">
                   <button class="button is-info">Notify Me</button>
@@ -98,9 +98,9 @@
   </header>
   
 <main role='main'>
-  <section class="section" id="about" role='about'>
+  <section class="section" id="about" role='about' aria-labelledby="about-us">
     <div class="section-heading has-text-centered">
-      <h2 class="title is-2">About Us</h2>
+      <h2 class="title is-2" id="about-us">About Us</h2>
       <h5 class="subtitle is-5">We of all trades, master of "some"</h5>
       <div class="container">
         <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
@@ -210,10 +210,10 @@
     </div>
   </section>
 
-  <div class="hero has-background-grey-light" role="three-key-features">
+  <div class="hero has-background-grey-light" role="three-key-features" aria-labelledby="three-key-features">
     <div class="container features">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2">Three key features</h2>
+        <h2 class="title is-2" id="three-key-features">Three key features</h2>
         <h5 class="subtitle is-5">We don't hide what we do</h5>
       </div>
 
@@ -267,10 +267,10 @@
     </div>
   </div>
 
-  <div class="hero is-info">
+  <div class="hero is-info" aria-labelledby="list-of-topics">
     <div class="hero-body">
       <div class="container">
-        <h3 class="title">List of topics</h3>
+        <h3 class="title" id="list-of-topics">List of topics</h3>
         <div class="subtitle">We are always in touch we the outside world</div>
       </div>
     </div>
@@ -428,10 +428,10 @@
     </div>
   </div>
 
-  <section class="section has-background-grey-lighter" role="upcoming-events">
+  <section class="section has-background-grey-lighter" role="upcoming-events" aria-labelledby="upcoming-events-block">
     <div class="container has-text-centered">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Upcoming events</h2>
+          <h2 class="title is-2" id="upcoming-events-block">Upcoming events</h2>
           <h5 class="subtitle is-5">Outcoming dates for the best options</h5>
         </div>
 
@@ -503,9 +503,9 @@
     </div>
   </section>
 
-  <section class="section" role="services">
+  <section class="section" role="services" aria-labelledby="services-block">
     <div class="section-heading has-text-centered">
-      <h2 class="title is-2">Services</h2>
+      <h2 class="title is-2" id="services-block">Services</h2>
       <h5 class="subtitle is-5">What can I do for you?</h5>
     </div>
     <div class="container">
@@ -551,10 +551,10 @@
     </div>
   </section>
 
-  <section class="section has-background-grey-lighter" role='photos-from-past'>
+  <section class="section has-background-grey-lighter" role='photos-from-past' aria-labelledby="photos-block">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2">Photos from past events</h2>
+        <h2 class="title is-2" id="photos-block">Photos from past events</h2>
       </div>
 
       <div class="container portfolio-container">
@@ -716,10 +716,10 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" aria-labelledby="forum">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2">Forum</h2>
+        <h2 class="title is-2" id="forum">Forum</h2>
         <h5 class="subtitle is-5">Discuss any topic with no leaving this page</h5>
       </div>
 
@@ -877,14 +877,14 @@
     </div>
   </section>
 
-  <section class="section has-background-light">
+  <section class="section has-background-light" aria-labelledby="contact-us">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2">Contact us</h2>
+        <h2 class="title is-2" id="contact-us">Contact us</h2>
         <h5 class="subtitle is-5">Don't hesitate, ask anything</h5>
       </div>
 
-      <form class="column is-half is-offset-one-quarter box" aria-labelledby="contact form" role="form">
+      <form class="column is-half is-offset-one-quarter box" role="form" aria-label="contact form">
         <div class="field">
           <label class="label">Name</label>
           <span class="visually-hidden">Please enter your name</span>
@@ -968,10 +968,10 @@
 
         <div class="field is-grouped">
           <div class="control">
-            <button class="button is-link" role="button">Submit</button>
+            <button class="button is-link" role="button" aria-label="click to submit">Submit</button>
           </div>
           <div class="control">
-            <button class="button is-text" role="button">Cancel</button>
+            <button class="button is-text" role="button" aria-label="click to cancel">Cancel</button>
           </div>
         </div>
       </form>
