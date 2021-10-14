@@ -886,18 +886,18 @@
 
       <form class="column is-half is-offset-one-quarter box" role="form" aria-label="contact form">
         <div class="field">
-          <label class="label">Name</label>
+          <label class="label" for="name">Name</label>
           <span class="visually-hidden">Please enter your name</span>
           <div class="control">
-            <input class="input" type="text" placeholder="Text input">
+            <input class="input" type="text" placeholder="Text input" id="name">
           </div>
         </div>
 
         <div class="field">
-          <label class="label">Username</label>
+          <label class="label" for="username">Username</label>
           <span class="visually-hidden">Please enter your username</span>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text">
+            <input class="input is-success" type="text" id="username">
             <span class="icon is-small is-left">
               <i aria-hidden="true" class="fas fa-user"></i>
             </span>
@@ -909,10 +909,10 @@
         </div>
 
         <div class="field">
-          <label class="label">Email</label>
+          <label class="label" for="email">Email</label>
           <span class="visually-hidden">Please enter your email</span>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+            <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="email">
             <span class="icon is-small is-left">
               <i aria-hidden="true" class="fas fa-envelope"></i>
             </span>
@@ -924,11 +924,11 @@
         </div>
 
         <div class="field">
-          <label class="label">Subject</label>
+          <label class="label" for="subject">Subject</label>
           <span class="visually-hidden">Please choose your subject</span>
           <div class="control">
             <div class="select">
-              <select>
+              <select id="subject">
                 <option>Select dropdown</option>
                 <option>With options</option>
               </select>
@@ -937,17 +937,17 @@
         </div>
 
         <div class="field">
-          <label class="label">Message</label>
+          <label class="label" for="message">Message</label>
           <span class="visually-hidden">Please enter your message</span>
           <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <textarea class="textarea" placeholder="Textarea" id="message"></textarea>
           </div>
         </div>
 
         <div class="field">
           <div class="control">
-            <label class="checkbox">
-              <input type="checkbox">
+            <label class="checkbox" for="agree">
+              <input type="checkbox" id="agree">
               I agree to the <a>terms and conditions</a>
             </label>
           </div>
@@ -955,12 +955,12 @@
 
         <div class="field">
           <div class="control" role="radiogroup">
-            <label class="radio">
-              <input type="radio" name="question" role="radio">
+            <label class="radio" for="yes">
+              <input type="radio" name="question" role="radio" id="yes">
               Yes
             </label>
-            <label class="radio">
-              <input type="radio" name="question" role="radio">
+            <label class="radio" for="no">
+              <input type="radio" name="question" role="radio" for="no">
               No
             </label>
           </div>
