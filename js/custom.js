@@ -40,31 +40,38 @@ function toggleTab (selectedNav, targetId) {
 
 // Custom logic
 // Activates any given tab panel
+var keys = {
+  end: 35,
+  home: 36,
+  left: 37,
+  up: 38,
+  right: 39,
+  down: 40,
+  delete: 46,
+};
+
+var direction = {
+  37: -1,
+  38: -1,
+  39: 1,
+  40: 1,
+};
+
+var tablist = document.querySelectorAll('[role="tablist"]')[0];
 panels = document.querySelectorAll('[role="tabpanel"]');
 tabs = document.querySelectorAll('[role="tab"]');
 
 function deactivateTabs () {
   for (t = 0; t < tabs.length; t++) {
+    tabs[t].setAttribute("tabindex", "-1");
     tabs[t].classList.remove("is-active");
     tabs[t].setAttribute("aria-selected", "false");
-    tabs[t].setAttribute("tabindex", "-1");
     tabs[t].removeEventListener("focus", focusEventHandler);
   }
 
   for (p = 0; p < panels.length; p++) {
     panels[p].setAttribute("hidden", "hidden");
   }
-}
-
-function focusEventHandler (event) {
-  const { target } = event;
-  setTimeout((target) => {
-    focused = document.activeElement;
-
-    if (target === focused) {
-      activateTab(target, false);
-    }
-  }, 500, target);
 }
 
 function activateTab (tab, setFocus) {
@@ -85,6 +92,98 @@ function activateTab (tab, setFocus) {
   }
 }
 
+function determineOrientation (event) {
+  var key = event.keyCode;
+  var vertical = tablist.getAttribute("aria-orientation") == "vertical";
+  var proceed = false;
+
+  if (vertical) {
+    if (key === keys.up || key === keys.down) {
+      event.preventDefault();
+      proceed = true;
+    }
+  } else {
+    if (key === keys.left || key === keys.right) {
+      proceed = true;
+    }
+  }
+
+  if (proceed) {
+    switchTabOnArrowPress(event);
+  }
+}
+
+function switchTabOnArrowPress (event) {
+  var pressed = event.keyCode;
+  for (x = 0; x < tabs.length; x++) {
+    tabs[x].addEventListener("focus", focusEventHandler);
+  }
+
+  if (direction[pressed]) {
+    const { target } = event;
+    if (target.index !== undefined) {
+      if (tabs[target.index + direction[pressed]]) {
+        tabs[target.index + direction[pressed]].focus();
+      } else if (pressed === keys.left || pressed === keys.up) {
+        focusLastTab();
+      } else if (pressed === keys.right || pressed == keys.down) {
+        focusFirstTab();
+      }
+    }
+  }
+}
+
+function focusFirstTab () {
+  tabs[0].focus();
+}
+
+function focusEventHandler (event) {
+  const { target } = event;
+  setTimeout((target) => {
+    focused = document.activeElement;
+
+    if (target === focused) {
+      activateTab(target, false);
+    }
+  }, 500, target);
+}
+
+function keydownEventListener (event) {
+  var key = event.keyCode;
+
+  console.log('key: ', key);
+
+  switch (key) {
+    case keys.end:
+      event.preventDefault();
+      activateTab(tabs[tabs.length - 1]);
+      break;
+    case keys.home:
+      event.preventDefault();
+      activateTab(tabs[0]);
+      break;
+
+    case keys.up:
+    case keys.down:
+      determineOrientation(event);
+      break;
+  }
+}
+
+function keyupEventListener (event) {
+  var key = event.keyCode;
+
+  switch (key) {
+    case keys.left:
+    case keys.right:
+      determineOrientation(event);
+      break;
+    case keys.delete:
+      determineDeletable(event);
+      break;
+  }
+}
+
 function clickEventListener (event) {
   var tab = event.currentTarget;
   activateTab(tab, false);
@@ -96,7 +195,7 @@ for (i = 0; i < tabs.length; ++i) {
 function addListeners (index) {
   tabs[index].addEventListener("click", clickEventListener);
   tabs[index].addEventListener("keydown", keydownEventListener);
-  // tabs[index].addEventListener("keyup", keyupEventListener);
+  tabs[index].addEventListener("keyup", keyupEventListener);
 
   tabs[index].index = index;
 }
