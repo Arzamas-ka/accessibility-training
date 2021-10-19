@@ -280,11 +280,11 @@
             <span class="icon is-small"><i aria-hidden="true"class="fa fa-image"></i></span>
             <span>Pictures</span>
         </button>
-        <button data-target="pane-3" id="3" role="tab" aria-selected="false" tabindex="-1" aria-controls="pane-3">
+        <button role="tab" tabindex="-1" aria-selected="false" aria-controls="pane-3" id="3" data-target="pane-3">
             <span class="icon is-small"><i aria-hidden="true" class="fab fa-superpowers"></i></span>
             <span>Team</span>
         </button>
-        <button data-target="pane-4" id="4" role="tab" aria-selected="false" tabindex="-1" aria-controls="pane-4" data-deletable=""> 
+        <button role="tab" tabindex="-1" aria-selected="false" aria-controls="pane-4" data-target="pane-4" id="4" data-deletable=""> 
             <span class="icon is-small"><i aria-hidden="true" class="fa fa-film"></i></span>
             <span>Video</span>
         </button>
@@ -293,7 +293,7 @@
   </div>
 
   <div class="tab-content container">
-    <div class="tab-pane is-active level" id="pane-1" role="tabpanel">
+    <div class="tab-pane" id="pane-1" tabindex="0" role="tabpanel" aria-labelledby="1">
       <div class="container">
         <div class="columns features">
           <div class="column is-4">
@@ -349,7 +349,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-3" role="tabpanel">
+    <div class="tab-pane" id="pane-3" tabindex="0" role="tabpanel" aria-labelledby="3" hidden="">
       <div class="columns medias">
         <div class="column">
           <div class="media">
