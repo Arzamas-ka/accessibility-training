@@ -312,3 +312,50 @@ a.box:focus,
   color: transparent;
   background-color: transparent;
 }
+
+/* nav */
+#appmenu > li > ul {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	padding: 20px;
+	margin: 0;
+  border-radius: 5px;
+	background-color: rgb(196, 196, 196);
+	width: 200%;
+	text-align: left;
+  width: 170px;
+}
+#appmenu > li > ul > li {
+  margin-bottom: 10px;
+}
+#appmenu > li > ul > li > a {
+  color: rgb(63, 63, 63);
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+#appmenu > li > ul > li > a:hover {
+  color: #094E7B;
+  border-bottom: 1px solid #094E7B;
+}
+
+#appmenu .navbar-divider {
+  background-color: rgb(63, 63, 63);
+}
+
+#appmenu > li:hover > ul {
+  display:block;
+}
+
+#appmenu > li[aria-expanded="true"] > ul {
+	display:block;
+}
+
+#appmenu > li:focus .button.is-white.is-outlined {
+  background-color: #fff;
+  border-color: #fff;
+  color: #0a0a0a;
+}
