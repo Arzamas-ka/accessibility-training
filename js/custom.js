@@ -39,8 +39,7 @@ function toggleTab (selectedNav, targetId) {
 
 
 // Custom logic
-// Activates any given tab panel
-var keys = {
+let keys = {
   end: 35,
   home: 36,
   left: 37,
@@ -50,16 +49,16 @@ var keys = {
   delete: 46,
 };
 
-var direction = {
+let direction = {
   37: -1,
   38: -1,
   39: 1,
   40: 1,
 };
 
-var tablist = document.querySelectorAll('[role="tablist"]')[0];
-panels = document.querySelectorAll('[role="tabpanel"]');
-tabs = document.querySelectorAll('[role="tab"]');
+let tablist = document.querySelectorAll('[role="tablist"]')[0];
+let panels = document.querySelectorAll('[role="tabpanel"]');
+let tabs = document.querySelectorAll('[role="tab"]');
 
 function deactivateTabs () {
   for (t = 0; t < tabs.length; t++) {
@@ -150,8 +149,6 @@ function focusEventHandler (event) {
 
 function keydownEventListener (event) {
   var key = event.keyCode;
-
-  console.log('key: ', key);
 
   switch (key) {
     case keys.end:
