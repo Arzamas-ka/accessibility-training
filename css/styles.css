@@ -221,7 +221,9 @@ a.box:focus,
   color: #474747;
 }
 
-.hero.is-info .title {
+.hero.is-info .title,
+.hero-body,
+.tabs {
   background-color: #0e78be;
 }
 
