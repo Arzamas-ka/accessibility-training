@@ -8,18 +8,54 @@
   margin-bottom: -1px !important;
   position: relative;
 }
+
 .tab-content {
   padding: 2rem;
 }
+
 .tab-pane {
-  display: none;
-}
-.tab-pane.is-active {
   display: block;
   position: relative;
 }
-.is-active {
-  display: initial;
+
+.tab-pane[hidden] {
+  display: none;
+}
+
+.tabs.is-centered .tablist {
+  justify-content: center;
+}
+
+.hero .tabs .tablist {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  border-bottom: none;
+  align-items: center;
+}
+
+.hero.is-info .tabs.is-boxed button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 10px;
+  vertical-align: top;
+  color: white;
+  background: transparent;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.hero.is-info .tabs.is-boxed button.is-active,
+.hero.is-info .tabs.is-toggle li.is-active button,
+.hero.is-info .tabs.is-boxed button.is-active:hover,
+.hero.is-info .tabs.is-toggle li.is-active button:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #094e7b;
+  border: 1px solid transparent;
 }
 
 .cent {
@@ -41,6 +77,7 @@
   overflow: hidden;
   max-width: 100%;
 }
+
 .embed-container iframe,
 .embed-container object,
 .embed-container embed {
