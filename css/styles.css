@@ -326,7 +326,7 @@ a.box:focus,
 	background-color: rgb(196, 196, 196);
 	width: 200%;
 	text-align: left;
-  width: 170px;
+  width: 200px;
 }
 #appmenu > li > ul > li {
   margin-bottom: 10px;

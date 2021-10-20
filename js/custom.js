@@ -37,7 +37,6 @@ function toggleTab (selectedNav, targetId) {
   });
 }
 
-
 // Logic for Tabs
 let keys = {
   end: 35,
