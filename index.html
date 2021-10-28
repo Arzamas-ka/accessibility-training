@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Web Accessibility 2019 Q1 BY</title>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css'>
@@ -10,87 +11,97 @@
 </head>
 
 <body>
-  <div class="hero hero-bg is-fullheight">
-    <div class="hero-head">
-      <div class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item logo-link">
-              <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg">
-            </a>
-            <span class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
 
-          <div id="navbarMenu" class="navbar-menu">
-            <div class="navbar-end">
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fa fa-home"></i>
-                  </span>
-                  <span>Home</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fab fa-superpowers"></i>
-                  </span>
-                  <span>Examples</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fa fa-book"></i>
-                  </span>
-                  <span>Documentation</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>View Source</span>
-                </a>
+  <header role="banner">
+    <a href="#navbarMenu" class="visually-hidden">Skip to main content</a>
+    <div class="hero hero-bg is-fullheight">
+      <div class="hero-head">
+        <div class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item logo-link" tabindex="0">
+                <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" alt='Logo Epam'>
+              </a>
+              <span class="navbar-burger burger" data-target="navbarMenu">
+                <button class='burger-hidden' type="button" tabindex="0" aria-label="Open the menu" aria-haspopup="true">Click here to open the menu</button>
+                <nav id="navigation">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </nav>
               </span>
             </div>
+  
+            <nav id="navbarMenu" class="navbar-menu" role='navigation'>
+              <div class="navbar-end">
+                <span class="navbar-item">
+                  <button class="button is-white is-outlined" type='button'>
+                    <span class="icon">
+                      <i aria-hidden="true" class="fa fa-home"></i>
+                    </span>
+                    <span>Home</span>
+                  </button>
+                </span>
+                <span class="navbar-item">
+                  <button class="button is-white is-outlined" type='button'>
+                    <span class="icon">
+                      <i aria-hidden="true" class="fab fa-superpowers"></i>
+                    </span>
+                    <span>Examples</span>
+                  </button>
+                </span>
+                <span class="navbar-item">
+                  <button class="button is-white is-outlined" type='button'>
+                    <span class="icon">
+                      <i aria-hidden="true" class="fa fa-book"></i>
+                    </span>
+                    <span>Documentation</span>
+                  </button>
+                </span>
+                <span class="navbar-item">
+                  <button class="button is-white is-outlined" type='button'>
+                    <span class="icon">
+                      <i aria-hidden="true" class="fab fa-github"></i>
+                    </span>
+                    <span>View Source</span>
+                  </button>
+                </span>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hero-body" role="hero">
+        <div class="container has-text-centered">
+          <div class="column is-6 is-offset-3">
+            <h1 class="title has-text-white">We have web accessibility in mind</h1>
+            <div class="subtitle has-text-white">
+              Would you like to get the latest news?
+            </div>
+            <form class="box" role="form" aria-label="form for notify">
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <label for="notifyInput" class="visually-hidden">Please, enter your email</label>
+                  <input class="input" id="notifyInput" aria-describedby="notifyNote">
+				          <span id="notifyNote" class="visually-hidden">Please enter your email to allow us to notify you</span>
+                </p>
+                <p class="control">
+                  <button class="button is-info">Notify Me</button>
+                </p>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="column is-6 is-offset-3">
-          <div class="title has-text-white">We have web accessibility in mind</div>
-          <div class="subtitle has-text-white">
-            Would you like to get the latest news?
-          </div>
-          <div class="box">
-            <div class="field is-grouped">
-              <p class="control is-expanded">
-                <input class="input">
-              </p>
-              <p class="control">
-                <a class="button is-info">Notify Me</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" id="about">
+  </header>
+  
+<main role='main'>
+  <section class="section" id="about" role='about' aria-labelledby="about-us">
     <div class="section-heading has-text-centered">
-      <div class="title is-2">About Us</div>
-      <div class="subtitle is-5">We of all trades, master of "some"</div>
+      <h2 class="title is-2" id="about-us">About Us</h2>
+      <h5 class="subtitle is-5">We of all trades, master of "some"</h5>
       <div class="container">
         <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
           field of
@@ -102,9 +113,12 @@
     </div>
 
     <div class="content container">
-      <div class="is-1 title">Hello World</div>
-      <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
-      <div class="is-2 title">Second level</div>
+      <h1 class="is-1 title">Hello World</h1>
+      <p>Lorem ipsum<sup><a href="#" target="_blank" rel="noopener" aria-label="lorem ipsum" aria-describedby="open-a-new-window">[1]
+        <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
+          <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+      </a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
+      <h2 class="is-2 title">Second level</h2>
       <p>Curabitur accumsan turpis pharetra <b>augue tincidunt</b> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
       <ul>
         <li>- In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
@@ -112,8 +126,11 @@
         <li>- Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
         <li>- Ut non enim metus.</li>
       </ul>
-      <div class="is-3 title">Third level</div>
-      <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a>non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
+      <h3 class="is-3 title">Third level</h3>
+      <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#" target="_blank" rel="noopener" aria-label="lorem ipsum" aria-describedby="open-a-new-window">non ante
+        <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
+          <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+      </a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
       <ol class="ol-list">
         <li>Donec blandit a lorem id convallis.</li>
         <li>Cras gravida arcu at diam gravida gravida.</li>
@@ -123,7 +140,7 @@
         <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
         <li>Vivamus maximus ultricies pulvinar.</li>
       </ol>
-      <div class="blockquote">Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</div>
+      <blockquote class="blockquote">Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
       <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
       <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
       <dl>
@@ -135,7 +152,7 @@
         <dd>A technology to make HTML look better</dd>
       </dl>
       <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
-      <div class="is-4 title">Fourth level</div>
+      <h4 class="is-4 title">Fourth level</h4>
       <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
       <pre>
           &lt;!DOCTYPE html&gt;
@@ -150,10 +167,11 @@
           &lt;/html&gt;
           </pre>
       <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
-      <table>
+      <table role='table'>
+        <caption class='visually-hidden'>Table heading</caption>
         <tr>
-          <td>Header</td>
-          <td>Header</td>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
         </tr>
         <tr>
           <td>cell</td>
@@ -177,33 +195,33 @@
         </tr>
       </table>
       <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper. Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero accumsan pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel condimentum. Nam pharetra varius metus non pellentesque.</p>
-      <div class="is-5 title">Fifth level</div>
+      <h5 class="is-5 title">Fifth level</h5>
       <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
       <figure>
-        <img src="./img/photo-1572958731731-2b7fdb0a9818.jpg">
-        <img src="./img/photo-1574281852611-b2f04c86a520.jpg">
-        <img src="./img/photo-1575023615386-1554d895d09d.jpg">
+        <img src="./img/photo-1572958731731-2b7fdb0a9818.jpg" alt='Forest'>
+        <img src="./img/photo-1574281852611-b2f04c86a520.jpg" alt='Person'>
+        <img src="./img/photo-1575023615386-1554d895d09d.jpg" alt='Notebook'>
         <figcaption>
           Figure 1: Some beautiful placeholders
         </figcaption>
       </figure>
-      <div class="is-6 title">Sixth level</div>
+      <h3 class="is-6 title">Sixth level</h3>
       <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="hero has-background-grey-light">
+  <div class="hero has-background-grey-light" role="three-key-features" aria-labelledby="three-key-features">
     <div class="container features">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Three key features</div>
-        <div class="subtitle is-5">We don't hide what we do</div>
+        <h2 class="title is-2" id="three-key-features">Three key features</h2>
+        <h5 class="subtitle is-5">We don't hide what we do</h5>
       </div>
 
       <div class="columns">
         <div class="column is-4">
           <div class="card is-shady">
             <div class="card-image has-text-centered">
-              <i class="fa fa-paw"></i>
+              <i aria-hidden="true" class="fa fa-paw"></i>
             </div>
             <div class="card-content">
               <div class="content">
@@ -218,7 +236,7 @@
         <div class="column is-4">
           <div class="card is-shady">
             <div class="card-image has-text-centered">
-              <i class="fab fa-empire"></i>
+              <i aria-hidden="true" class="fab fa-empire"></i>
             </div>
             <div class="card-content">
               <div class="content">
@@ -234,7 +252,7 @@
         <div class="column is-4">
           <div class="card is-shady">
             <div class="card-image has-text-centered">
-              <i class="fab fa-apple"></i>
+              <i aria-hidden="true" class="fab fa-apple"></i>
             </div>
             <div class="card-content">
               <div class="content">
@@ -249,30 +267,30 @@
     </div>
   </div>
 
-  <div class="hero is-info">
+  <div class="hero is-info" aria-labelledby="list-of-topics">
     <div class="hero-body">
       <div class="container">
-        <div class="title">List of topics</div>
+        <h3 class="title" id="list-of-topics">List of topics</h3>
         <div class="subtitle">We are always in touch we the outside world</div>
       </div>
     </div>
-    <div class="tabs is-boxed is-centered main-menu" id="nav">
+    <div class="tabs is-boxed is-centered main-menu" id="nav" role="tablist">
       <ul>
-        <li data-target="pane-1" id="1" class="is-active">
+        <li data-target="pane-1" id="1" class="is-active" role='tab' aria-controls="pane-1">
           <a>
-            <span class="icon is-small"><i class="fa fa-image"></i></span>
+            <s class="icon is-small"><i aria-hidden="true" class="fa fa-image"></i></s
             <span>Pictures</span>
           </a>
         </li>
-        <li data-target="pane-3" id="3">
+        <li data-target="pane-3" id="3" role='tab' aria-controls="pane-3">
           <a>
-            <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
+            <span class="icon is-small"><i aria-hidden="true" class="fab fa-superpowers"></i></span>
             <span>Team</span>
           </a>
         </li>
-        <li data-target="pane-4" id="4">
+        <li data-target="pane-4" id="4" role='tab' aria-controls="pane-4">
           <a>
-            <span class="icon is-small"><i class="fa fa-film"></i></span>
+            <span class="icon is-small"><i aria-hidden="true" class="fa fa-film"></i></span>
             <span>Video</span>
           </a>
         </li>
@@ -281,21 +299,21 @@
   </div>
 
   <div class="tab-content container">
-    <div class="tab-pane is-active" id="pane-1" class="level">
+    <div class="tab-pane is-active level" id="pane-1" role="tabpanel">
       <div class="container">
         <div class="columns features">
           <div class="column is-4">
             <div class="card">
               <div class="card-image">
                 <div class="image is-4by3">
-                  <img src="./img/tab-1.jpg" class="modal-button" data-target="modal-image1">
+                  <img src="./img/tab-1.jpg" class="modal-button" data-target="modal-image1" alt='Device'>
                 </div>
               </div>
               <div class="card-content">
                 <div class="content">
                   <div>Click on image above</div>
                   <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                  <span class="button is-link modal-button" data-target="modal-image1">Image modal</span>
+                  <button class="button is-link modal-button" data-target="modal-image1" type='button' aria-haspopup="true">Image modal</button>
                 </div>
               </div>
             </div>
@@ -304,7 +322,7 @@
             <div class="card">
               <div class="card-image">
                 <div class="image is-4by3">
-                  <img src="./img/tab-2.jpg">
+                  <img src="./img/tab-2.jpg" alt='Oceane'>
                 </div>
               </div>
               <div class="card-content">
@@ -312,7 +330,7 @@
                   <div>Tempor orci dapibus ultrices in.</div>
                   <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
                     sed risus.</p>
-                  <span class="button is-link modal-button" data-target="modal-card">Modal Card</span>
+                  <button class="button is-link modal-button" data-target="modal-card" type='button' aria-haspopup="true">Modal Card</button>
                 </div>
               </div>
             </div>
@@ -321,14 +339,14 @@
             <div class="card">
               <div class="card-image">
                 <div class="image is-4by3">
-                  <img src="./img/tab-3.jpg" class="modal-button" data-target="modal-image2">
+                  <img src="./img/tab-3.jpg" class="modal-button" data-target="modal-image2" alt='Sea'>
                 </div>
               </div>
               <div class="card-content">
                 <div class="content">
                   <div>Click anywhere on card</div>
                   <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                  <span class="button is-link modal-button" data-target="modal-image2">Image modal</span>
+                  <button class="button is-link modal-button" data-target="modal-image2" type="button" aria-haspopup="true">Image modal</button>
                 </div>
               </div>
             </div>
@@ -337,12 +355,12 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-3">
+    <div class="tab-pane" id="pane-3" role="tabpanel">
       <div class="columns medias">
         <div class="column">
           <div class="media">
             <div class="media-left">
-              <i class="fab fa-github-square fa-4x"></i>
+              <i aria-hidden="true" class="fab fa-github-square fa-4x"></i>
             </div>
             <div class="media-content">
               <div class="content">
@@ -355,7 +373,7 @@
           </div>
           <div class="media">
             <div class="media-left">
-              <i class="fab fa-empire fa-4x"></i>
+              <i aria-hidden="true" class="fab fa-empire fa-4x"></i>
             </div>
             <div class="media-content">
               <div class="content">
@@ -370,7 +388,7 @@
         <div class="column">
           <div class="media">
             <div class="media-left">
-              <i class="fab fa-ravelry fa-4x"></i>
+              <i aria-hidden="true" class="fab fa-ravelry fa-4x"></i>
             </div>
             <div class="media-content">
               <div class="content">
@@ -383,7 +401,7 @@
           </div>
           <div class="media">
             <div class="media-left">
-              <i class="fab fa-github-alt fa-4x"></i>
+              <i aria-hidden="true" class="fab fa-github-alt fa-4x"></i>
             </div>
             <div class="media-content">
               <div class="content">
@@ -398,10 +416,10 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-4">
+    <div class="tab-pane" id="pane-4" role="tabpanel">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
-          <div class="title has-text-centered">Inspired video</div>
+          <h3 class="title has-text-centered">Inspired video</h3>
           <div class="embed-container image">
             <iframe src="https://player.vimeo.com/video/261794608" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
           </div>
@@ -410,42 +428,42 @@
     </div>
   </div>
 
-  <div class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter" role="upcoming-events" aria-labelledby="upcoming-events-block">
     <div class="container has-text-centered">
         <div class="section-heading has-text-centered">
-          <div class="title is-2">Upcoming events</div>
-          <div class="subtitle is-5">Outcoming dates for the best options</div>
+          <h2 class="title is-2" id="upcoming-events-block">Upcoming events</h2>
+          <h5 class="subtitle is-5">Outcoming dates for the best options</h5>
         </div>
 
       <div class="tile is-ancestor">
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="./img/web-access-summit-eventbrite.jpg">
+              <img src="./img/web-access-summit-eventbrite.jpg" alt='Web Accessibility Summit'>
             </div>
             <p class="title">New York</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <button class="button" type='button'>Buy Tickets</button>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="./img/access.jpg">
+              <img src="./img/access.jpg" alt='Conference'>
             </div>
             <p class="title">Los Angeles</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <button class="button" type="button">Buy Tickets</button>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="./img/dotcss-2019.jpg">
+              <img src="./img/dotcss-2019.jpg" alt='Conference Dot CSS'>
             </div>
             <p class="title">Mexico</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <button class="button" type="button">Buy Tickets</button>
           </div>
         </div>
       </div>
@@ -454,48 +472,48 @@
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="./img/images.jpg">
+              <img src="./img/images.jpg" alt='Access Accessibility'>
             </div>
             <p class="title">Paris</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <button class="button" type="button">Buy Tickets</button>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="./img/mid_300_33455472_313632022502906_5761920685983137792_n.png">
+              <img src="./img/mid_300_33455472_313632022502906_5761920685983137792_n.png" alt='CSS Minsk'>
             </div>
             <p class="title">Minsk</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <button class="button" type="button">Buy Tickets</button>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="./img/access.jpg">
+              <img src="./img/access.jpg" alt='Conference Holl'>
             </div>
             <p class="title">London</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <button class="button" type="button">Buy Tickets</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section" role="services" aria-labelledby="services-block">
     <div class="section-heading has-text-centered">
-      <div class="title is-2">Services</div>
-      <div class="subtitle is-5">What can I do for you?</div>
+      <h2 class="title is-2" id="services-block">Services</h2>
+      <h5 class="subtitle is-5">What can I do for you?</h5>
     </div>
     <div class="container">
       <div class="columns">
         <div class="column">
           <a class="box">
             <div class="content">
-              <div class="title is-5">Front End Web Development</div>
+              <h5 class="title is-5">Front End Web Development</h5>
               Develop Front End using latest standards with HTML5/CSS3 with added funtionality using JavaScript and
               Vue.js.
             </div>
@@ -504,7 +522,7 @@
         <div class="column">
           <a class="box">
             <div class="content">
-              <div class="title is-5">Back End Web Development</div>
+              <h5 class="title is-5">Back End Web Development</h5>
               Develop Back End application/service using Node.js or ASP .NET and SQL server or Mongo DB databases.
             </div>
           </a>
@@ -524,19 +542,19 @@
         <div class="column">
           <a class="box">
             <div class="content">
-              <div class="title is-5">Back End Web Development</div>
+              <h5 class="title is-5">Back End Web Development</h5>
               Develop Back End application/service using Node.js or ASP .NET and SQL server or Mongo DB databases.
             </div>
           </a>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter" role='photos-from-past' aria-labelledby="photos-block">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Photos from past events</div>
+        <h2 class="title is-2" id="photos-block">Photos from past events</h2>
       </div>
 
       <div class="container portfolio-container">
@@ -557,7 +575,7 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="./img/ev-1.jpeg">
+                  <img src="./img/ev-1.jpeg" alt='JS Core Forume'>
                 </div>
               </div>
               <div class="card-footer">
@@ -582,7 +600,7 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="./img/ev-2.jpeg">
+                  <img src="./img/ev-2.jpeg" alt='React Conference'>
                 </div>
               </div>
               <div class="card-footer">
@@ -607,7 +625,7 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="./img/ev-3.jpeg">
+                  <img src="./img/ev-3.jpeg" alt='Concert'>
                 </div>
               </div>
               <div class="card-footer">
@@ -634,7 +652,7 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="./img/ev-4.jpeg">
+                  <img src="./img/ev-4.jpeg" alt='TNN Forume'>
                 </div>
               </div>
               <div class="card-footer">
@@ -659,7 +677,7 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="./img/ev-5.jpeg">
+                  <img src="./img/ev-5.jpeg" alt='Forume Technology'>
                 </div>
               </div>
               <div class="card-footer">
@@ -684,7 +702,7 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="./img/ev-6.jpeg">
+                  <img src="./img/ev-6.jpeg" alt='Marketing'>
                 </div>
               </div>
               <div class="card-footer">
@@ -696,14 +714,13 @@
         </div>
       </div>
     </div>
-    </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section" aria-labelledby="forum">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Forum</div>
-        <div class="subtitle is-5">Discuss any topic with no leaving this page</div>
+        <h2 class="title is-2" id="forum">Forum</h2>
+        <h5 class="subtitle is-5">Discuss any topic with no leaving this page</h5>
       </div>
 
       <div class="columns">
@@ -728,7 +745,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=300">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=300" alt='Avatar smith'>  
                   </p>
                 </div>
                 <div class="media-content">
@@ -740,7 +757,7 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 1</span>
+                  <span class="has-text-grey-light"><i aria-hidden="true" class="fa fa-comments"></i> 1</span>
                 </div>
               </div>
             </div>
@@ -750,7 +767,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=301">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=301" alt='Avatar red'>
                   </p>
                 </div>
                 <div class="media-content">
@@ -772,7 +789,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=302">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=302" alt='Avatar jmith'>
                   </p>
                 </div>
                 <div class="media-content">
@@ -784,7 +801,7 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 13</span>
+                  <span class="has-text-grey-light"><i aria-hidden="true" class="fa fa-comments"></i> 13</span>
                 </div>
               </div>
             </div>
@@ -794,7 +811,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=303">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=303" alt='Avatar brown'>
                   </p>
                 </div>
                 <div class="media-content">
@@ -806,7 +823,7 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                  <span class="has-text-grey-light"><i aria-hidden="true" class="fa fa-comments"></i> 2</span>
                 </div>
               </div>
             </div>
@@ -816,7 +833,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=304">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=304" alt='Avatar hamburgler'>
                   </p>
                 </div>
                 <div class="media-content">
@@ -828,7 +845,7 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                  <span class="has-text-grey-light"><i aria-hidden="true" class="fa fa-comments"></i> 2</span>
                 </div>
               </div>
             </div>
@@ -838,7 +855,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=305">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=305" alt='Avatar rapper'>
                   </p>
                 </div>
                 <div class="media-content">
@@ -850,7 +867,7 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                  <span class="has-text-grey-light"><i aria-hidden="true" class="fa fa-comments"></i> 2</span>
                 </div>
               </div>
             </div>
@@ -858,56 +875,60 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section has-background-light">
+  <section class="section has-background-light" aria-labelledby="contact-us">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Contact us</div>
-        <div class="subtitle is-5">Don't hesitate, ask anything</div>
+        <h2 class="title is-2" id="contact-us">Contact us</h2>
+        <h5 class="subtitle is-5">Don't hesitate, ask anything</h5>
       </div>
 
-      <form class="column is-half is-offset-one-quarter box">
+      <form class="column is-half is-offset-one-quarter box" role="form" aria-label="contact form">
         <div class="field">
-          <label class="label">Name</label>
+          <label class="label" for="name">Name</label>
+          <span class="visually-hidden">Please enter your name</span>
           <div class="control">
-            <input class="input" type="text" placeholder="Text input">
+            <input class="input" type="text" placeholder="Text input" id="name">
           </div>
         </div>
 
         <div class="field">
-          <label class="label">Username</label>
+          <label class="label" for="username">Username</label>
+          <span class="visually-hidden">Please enter your username</span>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text">
+            <input class="input is-success" type="text" id="username">
             <span class="icon is-small is-left">
-              <i class="fas fa-user"></i>
+              <i aria-hidden="true" class="fas fa-user"></i>
             </span>
             <span class="icon is-small is-right">
-              <i class="fas fa-check"></i>
+              <i aria-hidden="true" class="fas fa-check"></i>
             </span>
           </div>
           <p class="help is-success">This username is available</p>
         </div>
 
         <div class="field">
-          <label class="label">Email</label>
+          <label class="label" for="email">Email</label>
+          <span class="visually-hidden">Please enter your email</span>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+            <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="email">
             <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
+              <i aria-hidden="true" class="fas fa-envelope"></i>
             </span>
             <span class="icon is-small is-right">
-              <i class="fas fa-exclamation-triangle"></i>
+              <i aria-hidden="true" class="fas fa-exclamation-triangle"></i>
             </span>
           </div>
           <p class="help is-danger">This email is invalid</p>
         </div>
 
         <div class="field">
-          <label class="label">Subject</label>
+          <label class="label" for="subject">Subject</label>
+          <span class="visually-hidden">Please choose your subject</span>
           <div class="control">
             <div class="select">
-              <select>
+              <select id="subject">
                 <option>Select dropdown</option>
                 <option>With options</option>
               </select>
@@ -916,29 +937,30 @@
         </div>
 
         <div class="field">
-          <label class="label">Message</label>
+          <label class="label" for="message">Message</label>
+          <span class="visually-hidden">Please enter your message</span>
           <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <textarea class="textarea" placeholder="Textarea" id="message"></textarea>
           </div>
         </div>
 
         <div class="field">
           <div class="control">
-            <label class="checkbox">
-              <input type="checkbox">
+            <label class="checkbox" for="agree">
+              <input type="checkbox" id="agree">
               I agree to the <a>terms and conditions</a>
             </label>
           </div>
         </div>
 
         <div class="field">
-          <div class="control">
-            <label class="radio">
-              <input type="radio" name="question">
+          <div class="control" role="radiogroup">
+            <label class="radio" for="yes">
+              <input type="radio" name="question" role="radio" id="yes">
               Yes
             </label>
-            <label class="radio">
-              <input type="radio" name="question">
+            <label class="radio" for="no">
+              <input type="radio" name="question" role="radio" for="no">
               No
             </label>
           </div>
@@ -946,15 +968,15 @@
 
         <div class="field is-grouped">
           <div class="control">
-            <button class="button is-link">Submit</button>
+            <button class="button is-link" role="button" aria-label="click to submit">Submit</button>
           </div>
           <div class="control">
-            <button class="button is-text">Cancel</button>
+            <button class="button is-text" role="button" aria-label="click to cancel">Cancel</button>
           </div>
         </div>
       </form>
     </div>
-  </div>
+  </section>
 
   <!-- <div class="section">
     <div class="container">
@@ -1064,12 +1086,13 @@
       </div>
     </div>
   </div> -->
+</main>
 
-  <div class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-2">
-          <div class="is-3 title"><b>Lessons</b></div>
+          <h3 class="is-3 title">Lessons</h3>
           <ul>
             <li><a>Lorem ipsum dolor sit amet</a></li>
             <li><a>Vestibulum errato isse</a></li>
@@ -1081,7 +1104,7 @@
           </ul>
         </div>
         <div class="column is-3">
-          <div class="is-3 title"><b>News</b></div>
+          <h3 class="is-3 title">News</h3>
           <ul>
             <li><a>Labore et dolore magna aliqua</a></li>
             <li><a>Kanban airis sum eschelor</a></li>
@@ -1093,7 +1116,7 @@
           </ul>
         </div>
         <div class="column is-4">
-          <div class="is-3 title"><b>Help</b></div>
+          <h3 class="is-3 title">Help</h3>
           <ul>
             <li><a>Objects in space</a></li>
             <li><a>Playing cards with coyote</a></li>
@@ -1106,15 +1129,33 @@
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a><i class="fab fa-github-alt fa-2x"></i></a>
-          <a><i class="fab fa-youtube fa-2x"></i></a>
-          <a><i class="fab fa-facebook fa-2x"></i></a>
-          <a><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="Github" aria-describedby="open-a-new-window">
+            <i aria-hidden="true" focusable="false" class="fab fa-github-alt fa-2x"></i>
+            <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Youtube" aria-describedby="open-a-new-window">
+            <i aria-hidden="true" class="fab fa-youtube fa-2x"></i>
+            <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook" aria-describedby="open-a-new-window">
+            <i aria-hidden="true" class="fab fa-facebook fa-2x"></i>
+            <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" aria-describedby="open-a-new-window">
+            <i aria-hidden="true" class="fab fa-twitter fa-2x"></i>
+            <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
+          </a>
         </div>
-        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        <p>The source code is licensed 
+          <a href="http://opensource.org/licenses/mit-license.php" target="_blank" rel="noopener" aria-label="License of MIT" aria-describedby="open-a-new-window">
+          MIT
+          <span id="open-a-new-window" class="visually-hidden">, will open in a new window</span>
+          <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+        </a>
+      </p>
       </div>
     </div>
-  </div>
+  </footer>
 
   <div id="modal-card" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
@@ -1122,18 +1163,18 @@
       <div class="card">
         <div class="card-image">
           <div class="image is-4by3">
-            <img src="https://source.unsplash.com/random/?sig=2">
+            <img src="https://source.unsplash.com/random/?sig=2" alt='Photo Jane Doe'>
           </div>
         </div>
         <div class="card-content">
           <div class="media">
             <div class="media-left">
               <div class="image is-48x48">
-                <img src="http://www.radfaces.com/images/avatars/linda-barret.jpg">
+                <img src="http://www.radfaces.com/images/avatars/linda-barret.jpg" alt='Avatar Jane Doe'>
               </div>
             </div>
             <div class="media-content">
-              <div class="title is-4">Jane Doe</div>
+              <h4 class="title is-4">Jane Doe</h4>
               <div class="subtitle is-6">@jane_doe</div>
             </div>
           </div>
@@ -1154,18 +1195,18 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image1" class="modal modal-fx-3dSlit">
+  <div id="modal-image1" class="modal modal-fx-3dSlit" role='modal'>
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
-      <img src="https://source.unsplash.com/random/?sig=1">
+      <img src="https://source.unsplash.com/random/?sig=1"  alt='Nature'>
     </div>
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image2" class="modal modal-fx-superScaled">
+  <div id="modal-image2" class="modal modal-fx-superScaled" role='modal'>
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
-      <img src="https://source.unsplash.com/random/?sig=3">
+      <img src="https://source.unsplash.com/random/?sig=3" alt='Flowers'>
     </div>
     <button class="modal-close is-large"></button>
   </div>
